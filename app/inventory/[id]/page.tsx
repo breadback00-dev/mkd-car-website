@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import VehicleGallery from "@/components/VehicleGallery";
 import VehicleCard from "@/components/VehicleCard";
+import FinanceCalculator from "@/components/FinanceCalculator";
 
 type Props = {
     params: Promise<{ id: string }>;
@@ -65,15 +66,6 @@ export default async function CarDetailsPage({ params }: Props) {
         `Hi, I'd like to book a test drive for the ${vehicle.year} ${vehicle.make} ${vehicle.model} (£${vehicle.price.toLocaleString()}). When are you available?`
     );
 
-    // Generic finance estimate: 10% deposit, 48 months, 14.9% APR representative
-    const deposit = Math.round(vehicle.price * 0.1);
-    const loan = vehicle.price - deposit;
-    const monthlyRate = 14.9 / 1200;
-    const months = 48;
-    const monthlyPayment = Math.round(
-        (loan * (monthlyRate * Math.pow(1 + monthlyRate, months))) /
-        (Math.pow(1 + monthlyRate, months) - 1)
-    );
 
     // Similar vehicles: same price range ±£2,500, different car, up to 3
     const similar = vehicles
@@ -251,24 +243,8 @@ export default async function CarDetailsPage({ params }: Props) {
                                 </div>
                             </div>
 
-                            {/* Finance Available callout */}
-                            <div className="bg-[#ebf0fe] border border-[#1e3a8a]/20 rounded-xl p-5 mb-8">
-                                <div className="flex items-start gap-4 mb-3">
-                                    <div className="w-10 h-10 bg-[#1e3a8a] text-white rounded-full flex items-center justify-center flex-shrink-0">
-                                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                                    </div>
-                                    <div>
-                                        <p className="font-bold text-[#1e3a8a] text-base">Finance Available</p>
-                                        <p className="text-gray-600 text-sm mt-1">
-                                            Spread the cost with flexible finance options — no obligation to proceed.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="bg-white rounded-lg px-4 py-3 border border-[#1e3a8a]/10 text-sm text-gray-700">
-                                    <span className="font-bold text-[#1e3a8a] text-base">From approx. £{monthlyPayment}/month</span>
-                                    <span className="text-gray-400 ml-2">based on £{deposit.toLocaleString()} deposit · 48 months · 14.9% APR representative</span>
-                                </div>
-                            </div>
+                            {/* Interactive Finance Calculator */}
+                            <FinanceCalculator price={vehicle.price} />
 
                             {/* Description */}
                             <div className="mb-10">

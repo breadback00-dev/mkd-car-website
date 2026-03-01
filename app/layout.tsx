@@ -8,35 +8,34 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Bristol Used Cars",
-    default: "Bristol Used Cars | Reliable & Verified Used Vehicles",
+    template: "%s | MKD Cars",
+    default: "MKD Cars | Quality Used Cars in Bristol",
   },
-  description: "Find your next reliable used car in Bristol. Simple, fast, and trust-focused service. All vehicles are heavily inspected with a clear history.",
-  keywords: ["used cars", "Bristol", "car dealership", "buy used car", "reliable vehicles", "second hand cars Bristol"],
-  authors: [{ name: "Bristol Used Cars" }],
-  creator: "Bristol Used Cars",
-  metadataBase: new URL("https://mkdcarwebsite.test"), // Replace with actual production URL
+  description: "Find your next reliable used car in Bristol. Simple, fast, and trust-focused service. All vehicles are HPI checked with a clear history.",
+  keywords: ["used cars", "Bristol", "car dealership", "buy used car", "reliable vehicles", "second hand cars Bristol", "MKD Cars"],
+  authors: [{ name: "MKD Cars" }],
+  creator: "MKD Cars",
+  metadataBase: new URL("https://mkd-car-website.vercel.app"),
   openGraph: {
     type: "website",
     locale: "en_GB",
     url: "/",
-    siteName: "Bristol Used Cars",
-    title: "Bristol Used Cars | Reliable & Verified Used Vehicles",
+    siteName: "MKD Cars",
+    title: "MKD Cars | Quality Used Cars in Bristol",
     description: "Find your next reliable used car in Bristol. Simple, fast, and trust-focused service.",
     images: [
       {
-        url: "/og-image.jpg", // Needs placeholder in public folder when deployed
+        url: "/images/hero.jpg",
         width: 1200,
         height: 630,
-        alt: "Bristol Used Cars Showroom",
+        alt: "MKD Cars Forecourt Bristol",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bristol Used Cars | Reliable & Verified",
+    title: "MKD Cars | Quality Used Cars in Bristol",
     description: "Find your next reliable used car in Bristol.",
-    creator: "@bristolusedcars",
   },
   robots: {
     index: true,

@@ -8,7 +8,7 @@ export default function VehicleCard({ vehicle }: { vehicle: Vehicle }) {
                 {vehicle.images && vehicle.images.length > 0 ? (
                     <img
                         src={vehicle.images[0]}
-                        alt={`${vehicle.year} ${vehicle.make}`}
+                        alt={`${vehicle.year} ${vehicle.make} ${vehicle.model} for sale in Bristol — MKD Cars`}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                 ) : (

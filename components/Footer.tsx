@@ -7,14 +7,10 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                     {/* Column 1: About */}
                     <div>
-                        <h3 className="text-lg font-bold tracking-tight text-gray-900 mb-5">Bristol Used Cars</h3>
-                        <p className="text-gray-500 leading-relaxed pr-4 mb-4">
+                        <h3 className="text-lg font-bold tracking-tight text-gray-900 mb-5">MKD Cars</h3>
+                        <p className="text-gray-500 leading-relaxed pr-4">
                             Providing quality used vehicles with trust and clarity. Hand-picked, inspected, and ready to drive.
                         </p>
-                        <div className="bg-[#ebf0fe] border border-[#1e3a8a]/20 p-4 rounded-lg">
-                            <p className="text-[#1e3a8a] font-bold text-sm">For only £99 12 months MOT is standard</p>
-                            <p className="text-gray-600 text-sm mt-1">Let us know when and where!</p>
-                        </div>
                     </div>
 
                     {/* Column 2: Quick Links */}
@@ -52,14 +48,11 @@ export default function Footer() {
                             </a>
                         </div>
                         <div className="flex flex-col space-y-2">
-                            <a href="tel:07441906211" className="text-gray-900 hover:text-[#1e3a8a] font-bold text-lg transition-colors">
-                                (07441) 906211
-                            </a>
-                            <a href="tel:07441936665" className="text-gray-900 hover:text-[#1e3a8a] font-bold text-lg transition-colors">
-                                (07441) 936665
+                            <a href="tel:07729419246" className="text-gray-900 hover:text-[#1e3a8a] font-bold text-lg transition-colors">
+                                07729 419246
                             </a>
                             <a
-                                href="https://wa.me/447441906211"
+                                href="https://wa.me/447729419246"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-2 text-green-600 hover:text-green-700 font-bold text-lg transition-colors"
@@ -107,7 +100,7 @@ export default function Footer() {
                 </div>
 
                 <div className="mt-16 border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-                    <p>&copy; {new Date().getFullYear()} Bristol Used Cars. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} MKD Cars. All rights reserved.</p>
                     <p className="mt-4 md:mt-0">Simplifying your car buying experience.</p>
                 </div>
             </div>

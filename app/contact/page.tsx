@@ -2,10 +2,10 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Contact Us",
-    description: "Get in touch with Bristol Used Cars. Call us on (07441) 906211 or (07441) 936665. Visit our showroom at Central Park, Unit 405D, Petherton Rd, Bristol, BS14 9BZ.",
+    description: "Get in touch with MKD Cars. Call us on 07729 419246. Visit our showroom at Central Park, Unit 405D, Petherton Rd, Bristol, BS14 9BZ.",
     openGraph: {
-        title: "Contact Us | Bristol Used Cars",
-        description: "Get in touch with Bristol Used Cars. Call us on (07441) 906211 or (07441) 936665. Visit us at Petherton Rd, Bristol, BS14 9BZ.",
+        title: "Contact Us | MKD Cars",
+        description: "Get in touch with MKD Cars. Call 07729 419246. Visit us at Petherton Rd, Bristol, BS14 9BZ.",
         url: "/contact",
     },
     alternates: {
@@ -37,7 +37,7 @@ export default function ContactPage() {
                                 <div>
                                     <h3 className="text-lg font-bold text-gray-900 mb-2 tracking-tight">Showroom Address</h3>
                                     <address className="not-italic text-gray-500 text-lg leading-relaxed">
-                                        <strong className="text-gray-800">Bristol Used Cars</strong><br />
+                                        <strong className="text-gray-800">MKD Cars</strong><br />
                                         Central Park, Unit 405D<br />
                                         Petherton Rd<br />
                                         Bristol, BS14 9BZ
@@ -60,14 +60,11 @@ export default function ContactPage() {
                                 <div>
                                     <h3 className="text-lg font-bold text-gray-900 mb-3 tracking-tight">Call or WhatsApp</h3>
                                     <div className="flex flex-col gap-3">
-                                        <a href="tel:07441906211" className="text-gray-900 text-2xl tracking-tight font-extrabold hover:text-[#1e3a8a] transition-colors block">
-                                            (07441) 906211
-                                        </a>
-                                        <a href="tel:07441936665" className="text-gray-900 text-2xl tracking-tight font-extrabold hover:text-[#1e3a8a] transition-colors block">
-                                            (07441) 936665
+                                        <a href="tel:07729419246" className="text-gray-900 text-2xl tracking-tight font-extrabold hover:text-[#1e3a8a] transition-colors block">
+                                            07729 419246
                                         </a>
                                         <a
-                                            href="https://wa.me/447441906211"
+                                            href="https://wa.me/447729419246"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold px-5 py-3 rounded-lg transition-colors w-fit mt-1"
@@ -116,11 +113,10 @@ export default function ContactPage() {
                         </div>
                     </div>
 
-                    {/* Right Side: Contact Form — sends via Formspree */}
+                    {/* Right Side: Contact Form */}
                     <div className="p-8 md:p-12 lg:p-14 bg-gray-50 flex flex-col justify-center">
                         <h2 className="text-2xl font-extrabold tracking-tight text-gray-900 mb-2">Send a Message</h2>
                         <p className="text-gray-500 mb-8">Fill out the form below and we&apos;ll get back to you promptly.</p>
-                        {/* To activate: create a free account at formspree.io, create a form, and replace YOURFORMID below */}
                         <form
                             action="https://formspree.io/f/YOURFORMID"
                             method="POST"
@@ -152,7 +148,7 @@ export default function ContactPage() {
                         <div className="mt-6 pt-6 border-t border-gray-200 text-center">
                             <p className="text-gray-500 text-sm mb-3">Prefer to message directly?</p>
                             <a
-                                href="https://wa.me/447441906211"
+                                href="https://wa.me/447729419246"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-2 text-green-600 hover:text-green-700 font-bold transition-colors"

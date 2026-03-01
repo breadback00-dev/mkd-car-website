@@ -4,14 +4,14 @@ export default function Header() {
     return (
         <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
             <div className="bg-[#1e3a8a] text-white text-xs sm:text-sm py-2 px-4 text-center font-medium">
-                <span className="hidden sm:inline">🌟 For only £99 12 months MOT is standard - let us know when and where! 🌟</span>
-                <span className="sm:hidden">£99 12 months MOT standard!</span>
+                <span className="hidden sm:inline">✓ 12 months MOT included as standard &nbsp;|&nbsp; ✓ 12 months warranty from just £99</span>
+                <span className="sm:hidden">✓ MOT standard &nbsp;|&nbsp; ✓ Warranty from £99</span>
             </div>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-20">
                     <div className="flex-shrink-0 flex items-center">
                         <Link href="/" className="text-2xl font-extrabold tracking-tight text-[#1e3a8a]">
-                            Bristol Used Cars
+                            MKD Cars
                         </Link>
                     </div>
                     <nav className="hidden md:flex space-x-10">
@@ -27,11 +27,10 @@ export default function Header() {
                     </nav>
                     <div className="flex flex-col sm:flex-row items-center sm:gap-4 hidden sm:flex">
                         <div className="text-right hidden lg:block">
-                            <a href="tel:07441906211" className="block text-sm font-bold text-gray-900 hover:text-[#1e3a8a]">(07441) 906211</a>
-                            <a href="tel:07441936665" className="block text-sm font-bold text-gray-900 hover:text-[#1e3a8a]">(07441) 936665</a>
+                            <a href="tel:07729419246" className="block text-sm font-bold text-gray-900 hover:text-[#1e3a8a]">07729 419246</a>
                         </div>
                         <a
-                            href="https://wa.me/447441906211"
+                            href="https://wa.me/447729419246"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bg-green-500 hover:bg-green-600 text-white px-4 py-2.5 rounded-md font-semibold tracking-wide transition-all shadow-sm hover:shadow flex items-center gap-2"
@@ -40,7 +39,7 @@ export default function Header() {
                             WhatsApp
                         </a>
                         <a
-                            href="tel:07441906211"
+                            href="tel:07729419246"
                             className="bg-[#1e3a8a] hover:bg-[#1e40af] text-white px-5 py-2.5 rounded-md font-semibold tracking-wide transition-all shadow-sm hover:shadow"
                         >
                             Call Us

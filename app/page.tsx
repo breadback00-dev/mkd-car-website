@@ -314,7 +314,7 @@ export default function Home() {
           </div>
           <div className="h-[400px] bg-gray-100 rounded-2xl overflow-hidden border border-gray-200 shadow-sm relative">
             <iframe
-              src="https://maps.google.com/maps?q=51.423250,-2.569167&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=MKD+CARS+Limited+Central+Park+Unit+405D+Petherton+Rd+Bristol+BS14+9BZ&t=&z=16&ie=UTF8&iwloc=&output=embed"
               className="absolute inset-0 w-full h-full"
               style={{ border: 0 }}
               allowFullScreen={true}

@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MKD Cars Website
 
-## Getting Started
+A fast, SEO-focused used-car dealership website for MKD Cars in Bristol.
 
-First, run the development server:
+Live demo: [mkd-car-website.vercel.app](https://mkd-car-website.vercel.app)
+
+![MKD Cars homepage](public/mkd-cars-screenshot.png)
+
+## What It Includes
+
+- Trust-focused homepage for a single-location used car dealer
+- Inventory listing page with vehicle cards and filters
+- Vehicle detail pages generated from structured inventory data
+- Responsive vehicle image galleries
+- Finance calculator component
+- Contact page with phone, WhatsApp, directions, opening hours, and embedded map
+- SEO metadata, canonical routes, Open Graph data, and vehicle structured data
+- Real vehicle imagery stored in `public/images`
+
+## Why This Project Exists
+
+The goal was to turn a small dealership's stock and trust signals into a clean, fast website that helps buyers answer the practical questions quickly:
+
+- What cars are available?
+- What does each vehicle cost?
+- What is the mileage, fuel type, transmission, MOT, warranty, and service history?
+- How do I call, WhatsApp, get directions, or book a test drive?
+
+This is a client-style portfolio project: the value is in the complete business surface rather than a novel technical trick.
+
+## Tech Stack
+
+- Next.js App Router
+- React
+- TypeScript
+- Tailwind CSS
+- Static inventory data in `app/data/vehicles.ts`
+- Generated static vehicle detail pages
+
+## Running Locally
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Create a production build:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+Run linting:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run lint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Shape
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `app/page.tsx` - homepage and featured vehicles
+- `app/inventory/page.tsx` - full vehicle inventory
+- `app/inventory/[id]/page.tsx` - generated vehicle detail pages
+- `app/contact/page.tsx` - contact and location page
+- `app/data/vehicles.ts` - structured stock data
+- `components/` - header, footer, vehicle cards, gallery, filters, and finance calculator
+- `public/images/` - vehicle photography
 
-## Deploy on Vercel
+## Status
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Portfolio-ready dealership website. The live demo is available, the production build passes, and lint runs with only image-optimization warnings from raw `<img>` usage in vehicle gallery/card components.

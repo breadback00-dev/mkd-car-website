@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { vehicles } from "@/app/data/vehicles";
+import { getVehicles } from "@/app/data/stock";
 import VehicleCard from "@/components/VehicleCard";
 import { Metadata } from "next";
 
@@ -48,7 +48,8 @@ const googleReviews = [
   },
 ];
 
-export default function Home() {
+export default async function Home() {
+  const vehicles = await getVehicles();
   const featuredVehicles = vehicles.slice(0, 6);
 
   return (

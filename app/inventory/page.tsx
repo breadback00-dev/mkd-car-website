@@ -1,4 +1,4 @@
-import { vehicles } from "@/app/data/vehicles";
+import { getVehicles } from "@/app/data/stock";
 import InventoryClient from "@/components/InventoryClient";
 import { Metadata } from "next";
 
@@ -15,7 +15,9 @@ export const metadata: Metadata = {
     },
 };
 
-export default function InventoryPage() {
+export default async function InventoryPage() {
+    const vehicles = await getVehicles();
+
     return (
         <div className="bg-[#f7f7f7] min-h-[80vh] py-16 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">

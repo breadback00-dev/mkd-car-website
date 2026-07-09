@@ -1,4 +1,4 @@
-import { vehicles } from "@/app/data/vehicles";
+import { getSimilarVehicles, getVehicleById, getVehicles } from "@/app/data/stock";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
@@ -10,7 +10,11 @@ type Props = {
     params: Promise<{ id: string }>;
 };
 
-export function generateStaticParams() {
+export const dynamicParams = true;
+
+export async function generateStaticParams() {
+    const vehicles = await getVehicles();
+
     return vehicles.map((vehicle) => ({
         id: vehicle.id,
     }));
@@ -18,7 +22,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { id } = await params;
-    const vehicle = vehicles.find((v) => v.id === id);
+    const vehicle = await getVehicleById(id);
     if (!vehicle) return { title: "Not Found" };
 
     const titleStr = `${vehicle.year} ${vehicle.make} ${vehicle.model}`;
@@ -54,7 +58,7 @@ type SpecItem = { label: string; value: string | number | undefined };
 
 export default async function CarDetailsPage({ params }: Props) {
     const { id } = await params;
-    const vehicle = vehicles.find((v) => v.id === id);
+    const vehicle = await getVehicleById(id);
 
     if (!vehicle) notFound();
 
@@ -68,13 +72,7 @@ export default async function CarDetailsPage({ params }: Props) {
 
 
     // Similar vehicles: same price range ±£2,500, different car, up to 3
-    const similar = vehicles
-        .filter(
-            (v) =>
-                v.id !== vehicle.id &&
-                Math.abs(v.price - vehicle.price) <= 2500
-        )
-        .slice(0, 3);
+    const similar = await getSimilarVehicles(vehicle);
 
     const specs: SpecItem[] = [
         { label: "Body Type",        value: vehicle.bodyType },

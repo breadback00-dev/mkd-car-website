@@ -1,5 +1,9 @@
 # Inventory Data Schema
 
+The UI consumes the `Vehicle` type exported from `app/data/vehicles.ts`.
+`app/data/stock.ts` returns that same shape whether stock comes from Auto Trader
+or from the static fallback file.
+
 Vehicle Object Example:
 
 {
